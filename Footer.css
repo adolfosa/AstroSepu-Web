@@ -208,6 +208,14 @@ footer.top .socials > a {
   }
 }
 
+/* Asegurar que el footer sea visible en pantallas grandes */
+@media (min-width: 768px) {
+  #check:checked ~ section footer {
+    display: block !important; /* Forzar que el footer sea visible */
+    opacity: 1 !important; /* Forzar que el footer sea visible */
+    visibility: visible !important; /* Forzar que el footer sea visible */
+  }
+}
 /* Transición para el footer */
 section footer {
   transition: opacity 0.3s ease, visibility 0.3s ease;
