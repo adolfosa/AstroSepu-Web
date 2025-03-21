@@ -44,7 +44,14 @@ footer {
 footer.top {
   padding-top: 20px; /* Reducir el padding superior */
 }
-
+footer.top .links {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar horizontalmente */
+  gap: 2rem;
+  width: 100%;
+  margin: 0 auto; /* Centrar el contenedor */
+}
 footer.bottom {
   display: flex;
   align-items: center;
@@ -58,8 +65,9 @@ footer.bottom {
 .links-column {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
-  width: 8rem;
+  align-items: center; /* Centrar el contenido */
+  gap: 0.5rem;
+  text-align: center; /* Alinear el texto al centro */
 }
 
 footer h2 {
@@ -114,7 +122,8 @@ footer.top .socials > a {
 
 .socials {
   display: flex;
-  gap: 1rem; /* Aumentar el espacio entre iconos sociales */
+  justify-content: center; /* Centrar los íconos */
+  gap: 1rem;
 }
 
 .socials a:hover {
@@ -133,7 +142,8 @@ footer.top .socials > a {
 
 .store-logos {
   display: flex;
-  gap: 1rem; /* Aumentar el espacio entre logos */
+  justify-content: center; /* Centrar los logos */
+  gap: 1rem;
 }
 
 .second-row, .first-row {
@@ -143,15 +153,18 @@ footer.top .socials > a {
 
 .second-row {
   display: flex;
+  justify-content: center; /* Centrar las columnas */
   align-items: center;
-  justify-content: space-between; /* Distribuir el espacio entre elementos */
-  margin-top: 20px; /* Reducir el margen superior */
+  gap: 2rem; /* Espacio entre elementos */
+  width: 100%;
+  max-width: 800px; /* Limitar el ancho máximo */
 }
-
 .first-row {
   display: flex;
-  gap: 2rem; /* Aumentar el espacio entre columnas */
-  justify-content: space-between; /* Distribuir el espacio entre columnas */
+  justify-content: center; /* Centrar las columnas */
+  gap: 4rem; /* Espacio entre columnas */
+  width: 100%;
+  max-width: 800px; /* Limitar el ancho máximo */
 }
 
 .links {
@@ -161,6 +174,7 @@ footer.top .socials > a {
   width: 100%;
   margin-right: auto;
 }
+
 
 @media (width > 400px) {
   footer.top .links {
