@@ -29,35 +29,155 @@
     </style>
   </head>
   <body class="m-0 p-0 bg-black">
-    <!-- Incluir el sidebar -->
-    <div id="sidebar"></div>
+    <!-- this is the checkbox that is responsible for the opening and closing of the hamburger sidebar navbar -->
+    <input type="checkbox" id="check" class="hidden" />
 
-    <!-- Incluir el header -->
-    <div id="header"></div>
+    <!-- this is the lable with the icon of the hamburger menu that controls the checkbox -->
+    <label for="check" class="md:hidden">
+      <i
+        class="ri-menu-2-line text-white font-bold text-3xl absolute top-2 left-2 z-50 hover:bg-white hover:text-black px-2 py-1 rounded-xl"
+      ></i>
+    </label>
 
-    <!-- Contenido principal -->
-    <main>
-      <!-- Aquí va el contenido principal -->
-    </main>
+    <!-- this is the code for the sidebar -->
+    <div
+      id="sidebar_menu"
+      class="md:hidden w-[300px] h-screen bg-white/30 rounded-tr-3xl rounded-br-3xl border-2 border-white z-40 absolute -left-[300px] duration-500 flex-col"
+    >
+      <div class="flex justify-center pt-10 mb-16">
+        <span
+          style="font-family: 'Courier New', cursive"
+          class="text-white text-5xl pt-10 " 
+          >AstroSepu Studio</span
+        >
+      </div>
 
-    <!-- Incluir el footer -->
-    <div id="footer"></div>
+      <div class="w-full h-full flex-col">
+        <div
+          class="w-full h-[90px] hover:bg-white/30 flex justify-start space-x-5 items-center border px-3"
+        >
+          <span class="material-symbols-outlined text-white text-3xl"
+            >home</span
+          >
+          <span style="font-family: 'Poppins'" class="text-white text-2xl"
+            >Home</span
+          >
+        </div>
+        <div
+          class="w-full h-[90px] hover:bg-white/30 flex justify-start space-x-5 items-center border px-3"
+        >
+          <span class="material-symbols-outlined text-white text-3xl"
+            >call</span
+          >
+          <span style="font-family: 'Poppins'" class="text-white text-2xl"
+            >Call</span
+          >
+        </div>
+        <div
+          class="w-full h-[90px] hover:bg-white/30 flex justify-start space-x-5 items-center border px-3"
+        >
+          <span class="material-symbols-outlined text-white text-3xl"
+            >gallery_thumbnail</span
+          >
+          <span style="font-family: 'Poppins'" class="text-white text-2xl"
+            >Gallery</span
+          >
+        </div>
+        <div
+          class="w-full h-[90px] hover:bg-white/30 flex justify-start space-x-5 items-center border px-3"
+        >
+          <span class="material-symbols-outlined text-white text-3xl"
+            >forum</span
+          >
+          <span style="font-family: 'Poppins'" class="text-white text-2xl"
+            >Feedback</span
+          >
+        </div>
+      </div>
 
-    <!-- Script para cargar los componentes -->
-    <script>
-      // Función para cargar un componente
-      function loadComponent(componentId, componentUrl) {
-        fetch(componentUrl)
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById(componentId).innerHTML = data;
-          });
-      }
+      <div
+        class="absolute bottom-0 w-full h-[90px] rounded-br-3xl flex justify-center items-center"
+      >
+        <ul class="flex space-x-5 text-4xl text-white">
+          <li class="hover:scale-x-150 hover:scale-y-150 duration-500">
+            <i class="ri-facebook-circle-fill"></i>
+          </li>
+          <li class="hover:scale-x-150 hover:scale-y-150 duration-500">
+            <i class="ri-github-fill"></i>
+          </li>
+          <li class="hover:scale-x-150 hover:scale-y-150 duration-500">
+            <i class="ri-instagram-fill"></i>
+          </li>
+          <li class="hover:scale-x-150 hover:scale-y-150 duration-500">
+            <i class="ri-linkedin-box-fill"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-      // Cargar los componentes
-      loadComponent('sidebar', 'componentes/sidebar.html');
-      loadComponent('header', 'componentes/header.html');
-      loadComponent('footer', 'componentes/footer.html');
-    </script>
+    <nav class="hidden md:contents w-full h-16">
+      <div class="w-full h-16 flex justify-between p-2.5">
+        <div class="px-2">
+          <span style="font-family: 'Courier New', cursive" class="text-white text-5xl pt-10">AstroSepu Studio</span>
+        </div>
+  
+        <div class="p-1.5">
+          <ul class="text-white flex space-x-5 text-xl font-semibold">
+            <li class="px-2 py-1 rounded duration-500 hover:duration-500 hover:bg-white hover:text-black"><a href="">Home</a></li>
+            <li class="px-2 py-1 rounded duration-500 hover:duration-500 hover:bg-white hover:text-black"><a href="">Call</a></li>
+            <li class="px-2 py-1 rounded duration-500 hover:duration-500 hover:bg-white hover:text-black"><a href="">Gallery</a></li>
+            <li class="px-2 py-1 rounded duration-500 hover:duration-500 hover:bg-white hover:text-black"><a href="">Feedback</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section>
+        <footer class="top">
+          <div class="links">
+            <div class="first-row">
+              <div class="links-column">
+                <h2>Get Started</h2>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Login</a>
+                
+              </div>
+    
+              <div class="links-column">
+                <h2>News</h2>
+                <a href="#">Tech</a>
+                <a href="#">Market Place</a>
+                
+                <a href="#">FAQs</a>
+              </div>
+              
+              <div class="links-column">
+                <h2>Overview</h2>               
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Support</a>
+              </div>
+            </div>
+  
+             
+          </div>
+        </footer>
+        <footer class="bottom">
+          <p class="copyright">© 2023 All rights reserved</p>
+          <div class="socials">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-github"></a>
+          </div>
+          <div class="legal">
+            <a> License </a>
+            <a> Terms </a>
+            <a> Privacy </a>
+          </div>
+        </footer>
+      </section>
+
   </body>
 </html>

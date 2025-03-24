@@ -208,13 +208,6 @@ footer.top .socials > a {
   }
 }
 
-/* Ocultar el footer cuando el menú lateral esté desplegado */
-#check:checked ~ section footer {
-  display: none;
-  opacity: 0;
-  visibility: hidden;
-}
-
 /* Asegurar que el footer sea visible en pantallas grandes */
 @media (min-width: 768px) {
   #check:checked ~ section footer {
@@ -228,3 +221,8 @@ section footer {
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
+#check:checked ~ section footer {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
